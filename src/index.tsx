@@ -9,7 +9,7 @@ export interface IAppSettings {
 }
 export function run(appSettings: IAppSettings) {
   setupI18n(setUserLanguage(settings.language));
-  const rootElement = document.getElementById('root');
+  const rootElement = document.getElementById('root')!;
   const root = createRoot(rootElement);
 
   root.render(
