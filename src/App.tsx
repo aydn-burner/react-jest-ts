@@ -1,5 +1,4 @@
 import { JSXElementConstructor, ReactElement, Key } from 'react';
-import './index.css';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { setupRoutes } from './routes';
 import { Navigation } from './components/Navigation';
