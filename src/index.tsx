@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { setupI18n, setUserLanguage } from './helpers';
 import App from './App';
 
@@ -9,15 +9,13 @@ export interface IAppSettings {
 }
 export function run(appSettings: IAppSettings) {
   setupI18n(setUserLanguage(settings.language));
-  const rootElement = document.getElementById('root')!;
-  const root = createRoot(rootElement);
-
-  root.render(
+  ReactDOM.render(
     <BrowserRouter>
       <StrictMode>
         <App />
       </StrictMode>
-    </BrowserRouter>
+    </BrowserRouter>,
+    document.getElementById('root')
   );
 }
 

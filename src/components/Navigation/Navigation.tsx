@@ -1,4 +1,4 @@
-import React = require('react');
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { INavigationItemRoutes, setupRoutes } from '../../routes';
 import { NavigationItem } from './NavigationItem';
